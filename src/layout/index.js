@@ -4,6 +4,9 @@ import Header from "./header";
 import SectionOne from "./sectionOne";
 import SectionTwo from "./sectionTwo";
 import SectionThree from "./sectionThree";
+import SectionFour from "./sectionFour";
+import SectionFive from "./sectionFive";
+import Footer from "./footer";
 const Layout = (props) => {
   return (
     <div className="size-1520 primary-color-red background-dark">
@@ -13,7 +16,10 @@ const Layout = (props) => {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
+        <SectionFive />
       </main>
+      <Footer />
     </div>
   );
 };

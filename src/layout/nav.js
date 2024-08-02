@@ -1,7 +1,9 @@
 import React from "react";
 import Logo from "../assets/img/logo.svg";
+import { Link } from "react-router-dom";
 
 const Nav = (props) => {
+  //const navigate = useNavigate();
   return (
     <div>
       <header className="grid">
@@ -14,19 +16,22 @@ const Nav = (props) => {
           <div className="top-nav s-12 l-9">
             <ul className="top-ul right chevron">
               <li>
-                <a href="index.html">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="about-us.html">About Us</a>
+                <Link to="/aboutUs">About Us</Link>
+                {/*<a href="#" onClick={() => navigate("/aboutUs")}>
+                  About Us
+                </a>*/}
               </li>
               <li>
-                <a href="services.html">Services</a>
+                <Link to="/services">Services</Link>
               </li>
               <li>
-                <a href="gallery.html">Gallery</a>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li>
-                <a href="contact.html">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>

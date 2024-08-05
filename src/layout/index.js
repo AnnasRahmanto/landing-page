@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "./nav";
 import Footer from "./footer";
-import Home from "./../pages/home";
 import PublicRouter from "../config/router";
 
 const Layout = (props) => {
@@ -10,9 +9,6 @@ const Layout = (props) => {
       <Nav />
       <main role="main">
         <PublicRouter />
-        {/*
-        <Home />
-        */}
       </main>
       <Footer />
     </div>

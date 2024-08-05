@@ -1,9 +1,18 @@
 import React from "react";
 import Logo from "../assets/img/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = (props) => {
-  //const navigate = useNavigate();
+  const navLink = [
+    { id: 1, name: "Home", path: "/" },
+    { id: 2, name: "About Us", path: "/aboutUs" },
+    { id: 3, name: "Services", path: "/services" },
+    { id: 4, name: "Gallery", path: "/gallery" },
+    { id: 5, name: "Contact", path: "/contact" },
+  ];
+
+  const path = useLocation();
+
   return (
     <div>
       <header className="grid">
@@ -15,24 +24,22 @@ const Nav = (props) => {
           </a>
           <div className="top-nav s-12 l-9">
             <ul className="top-ul right chevron">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/aboutUs">About Us</Link>
-                {/*<a href="#" onClick={() => navigate("/aboutUs")}>
-                  About Us
-                </a>*/}
-              </li>
-              <li>
-                <Link to="/services">Services</Link>
-              </li>
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              {navLink.map((data) => {
+                return (
+                  <li key={data.id}>
+                    <Link
+                      to={data.path}
+                      className={
+                        path.pathname === data.path
+                          ? "background-red text-white text-bold"
+                          : " "
+                      }
+                    >
+                      {data.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </nav>

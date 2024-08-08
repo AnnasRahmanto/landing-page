@@ -1,6 +1,7 @@
 //import logo from './assets/image/logo.svg';
 import "./assets/css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@coreui/coreui/dist/css/coreui.min.css";
 import "./assets/css/components.css";
 import "./assets/css/icons.css";
 import "./assets/css/responsee.css";
